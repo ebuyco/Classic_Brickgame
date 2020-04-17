@@ -3,7 +3,7 @@ import { StyledTetrisWrapper, StyledTetris } from '../components/styles/StyledTe
 import {usePlayer} from '../components/hooks/usePlayer';
 import {useStage} from '../components/hooks/useStage';
 
-import { createStage } from '../components/gameHelpers';
+import { createStage, checkCollision } from '../components/gameHelpers';
 // Components
 import Stage from './Stage';
 import Display from './Display';
@@ -14,20 +14,35 @@ const Tetris = () => {
   const [gameOver, setGameOver] = useStage(false);
 
   const [player, updatePlayerPos, resetPlayer] = usePlayer();
-  const [stage, setStage] = useStage(player);
+  const [stage, setStage] = useStage(player, resetPlayer);
 
   console.log('working');
 
   const movePlayer = dir => {
-    updatePlayerPos({ x: dir, y: 0});
+    if(!checkCollision(player, stage, {x: dir, y:0})){
+      updatePlayerPos({ x: dir, y: 0});
+    }
   }
 
   const startGame = () => {
     console.log('game is working');
     setStage(createStage());
     resetPlayer();
+    setGameOver(false);
   }
 
+  const drop = () => {
+    if(!checkCollision(player,stage, {x:0, y: 1})){
+      updatePlayerPos({x: 0, y: 1, collided: false})
+    } else {
+      if(player.pos.y < 1){
+        console.log('Game Over!!!');
+        setGameOver(true);
+        setDroptime(null);
+      }
+      updatePlayerPos({ x:0, y: 0, collided: true});
+    }
+  }
   const dropPlayer = () => {
         drops();
   }
