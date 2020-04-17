@@ -33,7 +33,7 @@ const Tetris = () => {
   }
 
   const move = ({ keyCode }) => {
-    if(!gameOVer){
+    if(!gameOver){
       if (keyCode === 37){
         movePlayer(-1);
       } else if (keyCode === 39 ){
