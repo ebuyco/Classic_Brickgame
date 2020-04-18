@@ -1,6 +1,7 @@
 import { BellIcon, MessengerIcon, CaretIcon,
     PlusIcon, CogIcon, ChevronIcon, ArrowIcon, BoltIcon
-} from './Icons';
+} from '../public/static';
+import { BellIconStyle, MessengerIconStyle } from '../components/styles/IconStyle';
 import React, { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
@@ -8,8 +9,8 @@ import { CSSTransition } from 'react-transition-group';
 const Navigation = () => {
     return(
         <>
-             <img src='../static/arrow.svg' alt="bellicon" className="bellicon" />
-             <img src='../static/bell.svg' alt="arrowicon" className="arrowicon" />
+             <BellIconStyle src={ArrowIcon} alt="bellicon"  />
+             <MessengerIconStyle src={MessengerIcon} alt="arrowicon"  />
         </>
     )
 }

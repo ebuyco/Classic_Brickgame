@@ -2,8 +2,7 @@
 const withFonts = require('next-fonts');
 
 module.exports = withFonts({
-  exportTrailingSlash: true,
-  parser: true,
+ 
   config: {
     ctx: {
       theme: JSON.stringify(process.env.REACT_APP_THEME)
@@ -21,8 +20,8 @@ module.exports = withFonts({
         options: {
           limit: 100000,
           publicPath: `/_next/static/images/`,
-          outputPath: `${options.isServer ? '../' : ''}static/images/`,
-          name: '[name]-[hash].[ext]'
+          outputPath: `${options.isServer ? '../' : ''}static/images/`
+
         }
       }
     })
