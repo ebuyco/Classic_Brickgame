@@ -1,11 +1,8 @@
 // next.config.js
-const withSass = require('@zeit/next-sass');
-const withCSS = require('@zeit/next-css');
 const withFonts = require('next-fonts');
 
 module.exports = withFonts({
   exportTrailingSlash: true,
-  cssModules: true,
   parser: true,
   config: {
     ctx: {
@@ -15,12 +12,7 @@ module.exports = withFonts({
   devIndicators: {
     autoPrerender: true,
   },
-  exportPathMap: async function(
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
-
-  },
+  
   webpack (config, options) {
     config.module.rules.push({
       test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2|otf)$/,

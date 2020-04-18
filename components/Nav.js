@@ -1,3 +1,6 @@
+import { BellIcon, MessengerIcon, CaretIcon,
+    PlusIcon, CogIcon, ChevronIcon, ArrowIcon, BoltIcon
+} from './Icons';
 import React, { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
@@ -12,3 +15,4 @@ const Navigation = () => {
 }
 
 export default Navigation;
+
