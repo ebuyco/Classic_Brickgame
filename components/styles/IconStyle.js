@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {BellIcon, MessengerIcon} from '../../public/static/index';
+
 
 const BellIconStyle = styled.img`
         width: 100%;
