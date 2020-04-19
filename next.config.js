@@ -13,12 +13,12 @@ module.exports = withFonts({
   },
   
   webpack(config, options) {
-    config.module.rules.push({
+    config.module.rules.push(
+      {
       test: /\.svg$/,
       use: [
         {
-          loader: '@svgr/webpack'
-          
+          loader: '@svgr/webpack'     
         },
       ],
     },
@@ -39,5 +39,4 @@ module.exports = withFonts({
     return config;
   }
 },
-
 );
