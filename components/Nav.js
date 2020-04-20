@@ -24,10 +24,10 @@ const DropdownMenu = () => {
 
     const DropdownItem = (props) => {
         return(
-            <a href="#" className="menu__item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
-                <span className="icon__button">{props.leftIcon}</span>
+            <a href="#" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+                <span className="icon-button">{props.leftIcon}</span>
                 {props.children}
-                <span className="icon__right">{props.rightIcon}</span>
+                <span className="icon-right">{props.rightIcon}</span>
             </a>    
         )
     }
