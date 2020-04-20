@@ -36,6 +36,7 @@ const NavStyles = styled.nav`
             background-color:  #151616;
             padding: 0 1rem;
             border-bottom: 1px solid #474a4d;
+            display: flex;
         }
 
         .nav-item{
@@ -70,6 +71,7 @@ const NavStyles = styled.nav`
         .dropdown{
             position: absolute;
             top: 58px;
+            left: 200px;
             width: 300px;
             transform: translateX(-45%);
             background-color:  #242526;
@@ -97,9 +99,8 @@ const NavStyles = styled.nav`
 
             .icon-button{
                 margin-right: 0.5rem;
-
                 &:hover{
-                        filter: none;
+                  filter: none;
                 }
             }
         }

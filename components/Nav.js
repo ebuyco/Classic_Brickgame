@@ -138,7 +138,6 @@ const Navigation = () => {
                 <NavItem icon={<PlusIcon className="icon__style"/>}/>
                 <NavItem icon={<BellIcon className="icon__style"/>}/>
                 <NavItem icon={<MessengerIcon className="icon__style"/>}/>
-
                 <NavItem icon={<CaretIcon className="icon__style"/>}>
                     <DropdownMenu/>
                 </NavItem>    
