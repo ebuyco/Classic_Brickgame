@@ -22,7 +22,7 @@ export const usePlayer = () => {
 
         const playerRotate = (stage, dir ) => {
             const clonedPlayer = JSON.parse(JSON.stringify(player));
-            clonedPlayer.teromino = rotate(clonedPlayer.tetromino, dir);
+            clonedPlayer.tetromino = rotate(clonedPlayer.tetromino, dir);
 
 
             const pos = clonedPlayer.pos.x;

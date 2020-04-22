@@ -2,6 +2,11 @@ import styled from 'styled-components';
 
 const NavStyles = styled.nav`
         width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+
 
         .icon__style{
            width: 100%;
