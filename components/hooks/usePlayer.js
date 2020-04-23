@@ -11,12 +11,15 @@ export const usePlayer = () => {
         });
 
         const rotate = (matrix, dir ) => {
-                const rototatedTetro = matrix.map((_, index) => 
-                    matrix.map(col => col[index]),
-                )
+                // const rototatedTetro = matrix.map((_, index) => 
+                //     matrix.map(col => col[index]),
+                // )
 
-                if(dir > 0 ) return rototatedTetro.map(row => row.reverse());
-                return rototatedTetro.reverse();
+                // if(dir > 0 ) return rototatedTetro.map(row => row.reverse());
+                // return rototatedTetro.reverse();
+                const mtrx = matrix.map((_, index) => matrix.map(column => column[index]));
+                if (dir > 0) return mtrx.map(row => row.reverse());
+                return mtrx.reverse();
 
         }
 
